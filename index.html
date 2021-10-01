@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <title>Youtube Clone</title>
+
+</head>
+    <body>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+            <symbol id="home" viewBox="0 0 16 16">
+            <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4H2.5z"/>
+            </symbol>
+            
+            <symbol id="people-circle" viewBox="0 0 16 16">
+            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </symbol>
+        </svg>
+
+        <header class="header">
+            <a href="#sidebar" data-bs-toggle="offcanvas" class="d-block mt-3" role="button" aria-controls="sidebar">
+                 <img src="assets/images/home.png" alt="home-icon" width="50px">
+            </a>
+            <a href="#" class="col-2" data-bs-toggle="tooltip" data-bs-placement="top" title="Youtube Home">
+                <img src="assets/images/logo.png" alt="logo-image" class="youtube-logo">
+            </a>
+            <form action="" class="search-bar">
+                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                <button type="submit" class="search-btn">
+                    <img src="assets/images/magnify.png" alt="search-icon" />
+                </button>
+            </form>
+            <div class="menu-icons">
+                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Video">
+                    <img src="assets/images/upload.png" alt="Upload Video" alt="upload-icon" width="30px" />
+                </a>
+                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Youtube Apps">
+                    <img src="assets/images/apps.png" alt="Apps" alt="apps-icon" width="30px"/>
+                </a>
+                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title="Settings">
+                    <img src="assets/images/menu.png" alt="menu-icon" width="30px" />
+                </a>
+                <a href="#" class="nav-link py-3" title="" data-bs-toggle="tooltip" data-bs-placement="right" title="Sign In">
+                    <svg class="bi" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"></use></svg>
+                </a>
+            </div>
+            
+                <div class="offcanvas offcanvas-start canvas-desc" tabindex="-1" id="sidebar" aria-labelledby="sidebar-label">
+                    <div class="offcanvas-header">
+                        <ul class="nav nav-pills nav-flush flex-column mb-auto text-center">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link active py-3 border-bottom" aria-current="page" title="" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-original-title="Home">
+                                    <svg class="bi" width="24" height="24" role="img" aria-label="Home"><use xlink:href="#home"></use></svg><span style="padding:20px 20px">Home</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 border-bottom" title="Explore" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Dashboard">
+                                    <img src="assets/images/explore.png" alt="expore-icon" width="24"><span style="padding:20px 20px">Explore</span>                                   
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 border-bottom" title="Subscription" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Orders">
+                                    <img src="assets/images/subscriprion.png" alt="subscribe-icon" width="24"><span style="padding:20px 5px">Subscription</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 border-bottom" title="History" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Products">
+                                    <img src="assets/images/history.png" alt="history-icon" width="24"><span style="padding:20px 20px">History</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="nav-link py-3 border-bottom" title="SignIn" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                                    <svg class="bi" width="24" height="24" role="img" aria-label="Customers"><use xlink:href="#people-circle"></use></svg><span style="padding:20px 20px">Login</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+        </header>
+        
+        <div class="categories">  <!--   Categories section start -->
+            <section class="category-section">
+                <button class="category">All</button>
+                <button class="category">Apps</button>
+                <button class="category">Web Dev</button>
+                <button class="category">Design</button>
+                <button class="category">Coding</button>
+                <button class="category">CSS</button>
+                <button class="category">JS</button>
+                <button class="category">Front End</button>
+                <button class="category">Back End</button>
+                <button class="category">Full stack</button>
+            </section>
+        </div>        <!--   Categories section end -->   
+
+        <div class="videos">    <!--  Video start -->
+            <section class="video-section">
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="video-section">
+                <h2 class="video-section-title">
+                    Special Section
+                </h2>
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <section class="video-section">
+                <h2 class="video-section-title">
+                    Special Section
+                </h2>
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="video-container">
+                    <a href="#" class="thumbnail" data-duration="12:24">
+                        <img src="assets/images/video-icons.jpg" class="thumbnail-image" alt="video-thumbnail">
+                    </a>
+                    <div class="video-bottom-section">
+                        <a href="#">
+                            <img class="channel-icon" src="assets/images/placeholder.png" alt="video-icon">
+                        </a>
+                        <div class="video-details">
+                            <a href="#" class="video-title">Video Title</a>
+                            <a href="#" class="video-channel-name">Channel Name</a>
+                            <div class="video-metadata">
+                                <span>1k views</span>
+                                •
+                                <span>2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    </body>
+</html>
